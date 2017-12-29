@@ -32,14 +32,14 @@ board = read_board()
 # print board
 def print_board(board)
   (0...N).each {|row|
-    puts "-" * (2 * N + 1) if row % B == 0
-    print "|"
+    puts "=" * (2 * N + 1) if row % B == 0
+    print "!"
     print board[row].each_slice(B).map { |block| 
       block.join(" ")
-    }.join("|")
-    print "|\n"
+    }.join("!")
+    print "!\n"
   }
-  puts "-" * (2 * N + 1)
+  puts "=" * (2 * N + 1)
 end
 
 print_board(board)
