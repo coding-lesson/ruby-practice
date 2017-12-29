@@ -13,7 +13,7 @@ def read_board()
   }
 
   # Read file and populate the board
-  lines = IO.readlines("4x4.txt")
+  lines = IO.readlines(ARGV[0])
   lines.each_with_index {|line, row|
     line.chomp.split("").each_with_index {|x, col|
        num = if(x == ' ')
